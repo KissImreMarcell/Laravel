@@ -10,9 +10,9 @@ class AppointmentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($datum)
     {
-        $adatok = Appointment::all();
+        $adatok = Appointment::where([]);
         return response()->json($adatok, 200, options:JSON_UNESCAPED_UNICODE);
     }
 
